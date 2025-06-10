@@ -3,7 +3,7 @@ import Skill from "../models/Skill.js";
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {  // just "/" here because you used "/api/skills" in main
+router.get("/", async (req, res) => {
   try {
     const skills = await Skill.find();
     res.json(skills);
